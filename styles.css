@@ -1,0 +1,275 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --mainBackground: hsl(233, 47%, 7%);
+  --cardBackground: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --accentBg: hsla(277, 64%, 61%, 0.65);
+  --mainHeading: hsl(0, 0%, 100%);
+  --mainParagraph: hsla(0, 0%, 100%, 0.75);
+  --statHeadings: hsla(0, 0%, 100%, 0.6);
+  --fontSize: 15px;
+  --normal: 400;
+  --bold: 700;
+  --font1: 'Inter', sans-serif;
+  --font2: 'Lexend Deca', sans-serif;
+  --heading: 28px;
+  --rounded: 10px;
+}
+
+html,
+body {
+  display: grid;
+  place-items: center;
+  font-family: var(--font1);
+  color: var(--mainParagraph);
+  background-color: var(--mainBackground);
+  width: 100%;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 25px;
+  font-size: var(--fontSize);
+  font-weight: var(--normal);
+}
+
+main {
+  width: 335px;
+  height: 780px;
+  /* font-family: 'Red Hat Display', sans-serif; */
+  text-align: center;
+  background-color: var(--cardBackground);
+  border-radius: var(--rounded);
+}
+
+.card-img {
+  width: 335px;
+  height: 240px;
+  border-top-right-radius: var(--rounded);
+  border-top-left-radius: var(--rounded);
+  background-color: var(--accent);
+  background: linear-gradient(135deg, var(--accentBg), var(--accentBg)),
+    url('./images/image-header-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-content {
+  margin: 45px 35px auto 35px;
+}
+
+.card-content h1 {
+  font-size: var(--heading);
+  font-weight: var(--bold);
+  color: var(--mainHeading);
+  width: 260px;
+}
+
+.heading-text {
+  color: var(--accent);
+}
+
+.card-content p {
+  margin: 22px 0 50px 0;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats {
+  margin-bottom: 20px;
+}
+
+.stats h3 {
+  font-size: var(--heading);
+  font-weight: var(--bold);
+  color: var(--mainHeading);
+}
+
+.stats span {
+  color: var(--statHeadings);
+  text-transform: uppercase;
+  font-family: var(--font2);
+  line-height: 36px;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    width: 1115px;
+    height: 450px;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+
+  .card-img {
+    width: 50%;
+    height: 450px;
+    border-top-right-radius: var(--rounded);
+    border-bottom-right-radius: var(--rounded);
+    border-top-left-radius: 0;
+    background: linear-gradient(135deg, var(--accentBg), var(--accentBg)),
+      url('./images/image-header-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card-content {
+    width: 50%;
+    margin: 80px 0 68px 65px;
+  }
+
+  .card-content h1 {
+    font-size: 38px;
+    width: 90%;
+    line-height: 45px;
+    height: 80px;
+  }
+
+  .card-content p {
+    margin: 32px 0 70px 0;
+    width: 70%;
+  }
+
+  .stats-container {
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+  }
+
+  .stats {
+    margin: 0 67px 0 0;
+  }
+}
