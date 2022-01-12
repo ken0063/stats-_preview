@@ -248,12 +248,11 @@ main {
 
   .card-content {
     width: 50%;
-    margin: 80px 0 68px 65px;
+    margin: 70px 0 68px 65px;
   }
 
   .card-content h1 {
-    font-size: 38px;
-    width: 90%;
+    width: 60%;
     line-height: 45px;
     height: 80px;
   }
